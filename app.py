@@ -6,7 +6,7 @@ import openai
 openai_api_key = st.secrets.OpenAIAPI.openai_api_key
 
 # st.session_stateを使いメッセージのやり取りを保存
-if "messages" not in st_session_state:
+if "messages" not in st.session_state:
     st.session_state["messages"] = [
       {"role": "system", "contenrt": "あなたは優秀なアシスタントAIです。"}
     ]
