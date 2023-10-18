@@ -15,7 +15,7 @@ if "messages" not in st_session_state:
 def communicate():
     messages = st.session_state["messages"]
 
-    user_message = ["role": "user", "content": st.session_state["user_input"]]
+    user_message = {"role": "user", "content": st.session_state["user_input"]}
     messages.append(user_message)
 
     response = openai.ChatCompletion.creat(
